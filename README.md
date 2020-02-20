@@ -4,6 +4,7 @@ Jawaban Soal Shift Modul 1
 1) Whits adalah seorang mahasiswa teknik informatika. Dia mendapatkan tugas praktikum
 untuk membuat laporan berdasarkan data yang ada pada file “ Sample-Superstore.tsv” .
 Namun dia tidak dapat menyelesaikan tugas tersebut. Laporan yang diminta berupa :
+
 a. Tentukan wilayah bagian (region) mana yang memiliki keuntungan (profit) paling
 sedikit
 Jawaban = 
@@ -64,6 +65,14 @@ tersebut cepat diselesaikan. Idenya adalah kalian
 dapat menghasilkan password secara acak sebanyak 28 karakter yang terdapat huruf
 besar, huruf kecil, dan angka. 
 
+'''
+#! /bin/bash
+pass1=$1 
+password=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c28 | head -n 1)
+
+
+echo $password > "$pass1".txt
+'''
 
 
 (b) Password acak tersebut disimpan pada file berekstensi
@@ -83,6 +92,16 @@ maka akan menjadi huruf b.) dan
 
 (d) jangan lupa untuk membuat dekripsinya supaya
 nama file bisa kembali.
+
+
+```
+#! /bin/bash
+pass1=$1 
+password=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c28 | head -n 1)
+
+
+echo $password > "$pass1".txt
+```
 
 
 
