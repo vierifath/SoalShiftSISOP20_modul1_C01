@@ -90,6 +90,37 @@ maka akan menjadi huruf b.) dan
 nama file bisa kembali.
 
 
+Jawaban Soal Shift Modul 3
+[a] Maka dari
+itu, kalian mencoba membuat script untuk mendownload 28 gambar dari
+"https://loremflickr.com/320/240/cat" menggunakan command wget dan menyimpan file
+dengan nama "pdkt_kusuma_NO" (contoh: pdkt_kusuma_1, pdkt_kusuma_2,
+pdkt_kusuma_3) serta jangan lupa untuk menyimpan log messages wget kedalam
+sebuah file "wget.log". Karena kalian gak suka ribet, kalian membuat penjadwalan untuk menjalankan script download gambar tersebut. Namun, script download tersebut hanya
+berjalan
+```
+
+for ((i=1 ; $i<=28 ; i++))
+do
+
+wget "https://loremflickr.com/320/240/cat" -a "/home/vierifath/modul1no3/wget.$
+
+done
+```
+
+[b] setiap 8 jam dimulai dari jam 6.05 setiap hari kecuali hari Sabtu Karena
+gambar yang didownload dari link tersebut bersifat random, maka ada kemungkinan
+gambar yang terdownload itu identik. Supaya gambar yang identik tidak dikira Kusuma
+sebagai spam, maka diperlukan sebuah script untuk memindahkan salah satu gambar
+identik. Setelah memilah gambar yang identik, maka dihasilkan gambar yang berbeda
+antara satu dengan yang lain. Gambar yang berbeda tersebut, akan kalian kirim ke
+Kusuma supaya hatinya kembali ceria. Setelah semua gambar telah dikirim, kalian akan
+selalu menghibur Kusuma, jadi gambar yang telah terkirim tadi akan kalian simpan
+kedalam folder /kenangan dan kalian bisa mendownload gambar baru lagi.
+
+```
+5 6-23/8 * * 0-5 /home/vierifath/modul1no3/soal3Ashift.sh
+```
 
 
 
