@@ -64,21 +64,17 @@ tersebut cepat diselesaikan. Idenya adalah kalian
 (a) membuat sebuah script bash yang
 dapat menghasilkan password secara acak sebanyak 28 karakter yang terdapat huruf
 besar, huruf kecil, dan angka. 
+(b) Password acak tersebut disimpan pada file berekstensi
+.txt dengan nama berdasarkan argumen yang diinputkan dan HANYA berupa alphabet.
 
-'''
+```
 #! /bin/bash
 pass1=$1 
 password=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c28 | head -n 1)
 
 
 echo $password > "$pass1".txt
-'''
-
-
-(b) Password acak tersebut disimpan pada file berekstensi
-.txt dengan nama berdasarkan argumen yang diinputkan dan HANYA berupa alphabet.
-
-
+```
 
 (c) Kemudian supaya file .txt tersebut tidak mudah diketahui maka nama filenya akan di
 enkripsi dengan menggunakan konversi huruf (string manipulation) yang disesuaikan
@@ -94,14 +90,6 @@ maka akan menjadi huruf b.) dan
 nama file bisa kembali.
 
 
-```
-#! /bin/bash
-pass1=$1 
-password=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c28 | head -n 1)
-
-
-echo $password > "$pass1".txt
-```
 
 
 
