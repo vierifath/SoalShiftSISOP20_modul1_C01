@@ -131,9 +131,8 @@ seterusnya. Apabila melebihi z, akan kembali ke a, contoh: huruf w dengan jam 5.
 maka akan menjadi huruf b.) dan 
 
 
-(d) jangan lupa untuk membuat dekripsinya supaya
+(d) Jangan lupa untuk membuat dekripsinya supaya
 nama file bisa kembali.
-
 
 Jawaban Soal Shift Modul 3
 [a] Maka dari
