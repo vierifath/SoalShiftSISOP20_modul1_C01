@@ -1,3 +1,12 @@
+KELOMPOK        : C1
+ANGGOTA         :
+Vieri Fath Ayuba
+05111840000153
+
+
+
+
+
 # SoalShiftSISOP20_modul1_C01
 
 Jawaban Soal Shift Modul 1
@@ -131,8 +140,9 @@ seterusnya. Apabila melebihi z, akan kembali ke a, contoh: huruf w dengan jam 5.
 maka akan menjadi huruf b.) dan 
 
 
-(d) Jangan lupa untuk membuat dekripsinya supaya
+(d) jangan lupa untuk membuat dekripsinya supaya
 nama file bisa kembali.
+
 
 Jawaban Soal Shift Modul 3
 [a] Maka dari
@@ -143,14 +153,20 @@ pdkt_kusuma_3) serta jangan lupa untuk menyimpan log messages wget kedalam
 sebuah file "wget.log". Karena kalian gak suka ribet, kalian membuat penjadwalan untuk menjalankan script download gambar tersebut. Namun, script download tersebut hanya
 berjalan
 ```
-
 for ((i=1 ; $i<=28 ; i++))
 do
 
-wget "https://loremflickr.com/320/240/cat" -a "/home/vierifath/modul1no3/wget.$
+wget "https://loremflickr.com/320/240/cat" -a "/home/vierifath/modul1no3/wget.log" -O "/home/vierifath/modul1no3/pdkt_kusuma_$i"
 
 done
 ```
+*Penjelasan =
+Membuay perulangan dari 1 hingga 28 sehingga kita dapa mendownload sebanyak 28 gambar
+```wget "https://loremflickr.com/320/240/cat``` = Download foto dari ```URL https://loremflickr.com/320/240/cat```
+```-O "/home/vierifath/modul1no3/pdkt_kusuma_$i``` = Mengganti nama file dengan ```pdkt_kusuma_$i```
+```-a "/home/vierifath/modul1no3/wget.log"``` = Menyimpan log messages
+
+
 
 [b] setiap 8 jam dimulai dari jam 6.05 setiap hari kecuali hari Sabtu Karena
 gambar yang didownload dari link tersebut bersifat random, maka ada kemungkinan
@@ -163,9 +179,10 @@ selalu menghibur Kusuma, jadi gambar yang telah terkirim tadi akan kalian simpan
 kedalam folder /kenangan dan kalian bisa mendownload gambar baru lagi.
 
 ```
-5 6-23/8 * * 0-5 /home/vierifath/modul1no3/soal3Ashift.sh
+5 6-23/8 * * 1-5,7 /home/vierifath/modul1no3/soal3Ashift.sh
 ```
-
+*Penjelasan =
+Dengan membuat crontab dengan format diatur jamnya yaitu jam 6.05 hingga 23 dengan interval 8 jam. Kemudian didalam soal diperintahkan untuk melakukannya setiap hari kecuali hari sabtu, maka diaturlah 1-5,7 sehingga ketika hari sabtu crontab tidak berjalan.
 
 
 
