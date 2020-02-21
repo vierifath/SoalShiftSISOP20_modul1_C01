@@ -21,11 +21,16 @@ END {for(jawaban in i)
 ```
 *Penjelasan
 ```-F '        '```     = Memberi tahu separator nya adalah tab
+
 ```{ i[$13]+=$21}```    = Mengambil isi pada kolom ke 13 yaitu region, kemudian setiap region akan dihitung profitnya
 ``` END {for(jawaban in i) ```
+
 ```print jawaban" "i[jawaban]}``` = Outputnya berupa region yang memiliki profit paling sedikit
+
 ```Sample-Superstore.tsv``` = Nama file yang menjadi input
+
 ``` sort -nr ```        = Mengurutkan dari terbesar hingga terkecil
+
 ``` tail -1  ```        = Mengambil nilai dari yang terkecil sebanyak 1
 
 
@@ -45,13 +50,21 @@ END {for(jawaban in i)
 ```
 
 ```-F '        '```     = Memberi tahu separator nya adalah tab
-```if ($13 == "Central"```    = Mengambil isi pada kolom ke 13  berdasatkan region "Centra"
+
+```if ($13 == "Central"```    = Mengambil isi pada kolom ke 13  berdasatkan region "Central"
+
 ```{ i[$11]+=$21}```    = Mengambil isi pada kolom ke 13 yaitu region, kemudian setiap region akan dihitung profitnya
+
 ``` END {for(jawaban in i) ```
+
 ```print jawaban" "i[jawaban]}``` = Outputnya berupa state yang memiliki profit paling sedikit berdasarkan region "Central"
+
 ```Sample-Superstore.tsv``` = Nama file yang menjadi input
+
 ``` sort -nr ```        = Mengurutkan dari terbesar hingga terkecil
+
 ``` tail -1  ```        = Mengambil nilai dari yang terkecil sebanyak 2
+
 
 
 c. Tampilkan 10 produk (product name) yang memiliki keuntungan (profit) paling
