@@ -144,9 +144,11 @@ file dibuat pada jam 1 maka 16+1=17 dan huruf ke 17 adalah q dan begitu pula
 seterusnya. Apabila melebihi z, akan kembali ke a, contoh: huruf w dengan jam 5.28,
 maka akan menjadi huruf b.) dan 
 
+Belum cara enkripsi dan dekripsi
 
 (d) jangan lupa untuk membuat dekripsinya supaya
 nama file bisa kembali.
+Belum bisa cara enkripsi dan dekkripsi
 
 
 Jawaban Soal Shift Modul 3
@@ -191,5 +193,5 @@ kedalam folder /kenangan dan kalian bisa mendownload gambar baru lagi.
 *Penjelasan =
 Dengan membuat crontab dengan format diatur jamnya yaitu jam 6.05 hingga 23 dengan interval 8 jam. Kemudian didalam soal diperintahkan untuk melakukannya setiap hari kecuali hari sabtu, maka diaturlah 1-5,7 sehingga ketika hari sabtu crontab tidak berjalan.
 
-[c] Maaf mas 
+[c] Maaf mas belum mengerti
 
