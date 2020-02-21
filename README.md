@@ -19,6 +19,11 @@ END {for(jawaban in i)
         print jawaban" "i[jawaban]}
 ' Sample-Superstore.tsv | sort -nr | tail -1
 ```
+*Penjelasan
+```-F '        '``` = separator tab
+```{ i[$13]+=$21}``` = Ambil pada kolom ke 13, kemudian setiap region akan dihitung profitnya
+``` sort -nr ``` = Mengurutkan dari terbesar hingga terkecil
+```
 
 
 b. Tampilkan 2 negara bagian (state) yang memiliki keuntungan (profit) paling
