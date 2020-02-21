@@ -2,6 +2,8 @@ KELOMPOK        : C1
 ANGGOTA         :
 Vieri Fath Ayuba
 05111840000153
+Himawan Wijaya
+05111640000133
 
 
 
@@ -129,6 +131,9 @@ password=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c28 | head -n 1)
 
 echo $password > "$pass1".txt
 ```
+PENJELASAN      =
+```password=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c28 | head -n 1)``` = Membuat baris password sepanjang 28 digit secara acak. Kemudian file password di move ke "$pass1.txt"
+
 
 (c) Kemudian supaya file .txt tersebut tidak mudah diketahui maka nama filenya akan di
 enkripsi dengan menggunakan konversi huruf (string manipulation) yang disesuaikan
@@ -163,7 +168,9 @@ done
 *Penjelasan =
 Membuay perulangan dari 1 hingga 28 sehingga kita dapa mendownload sebanyak 28 gambar
 ```wget "https://loremflickr.com/320/240/cat``` = Download foto dari ```URL https://loremflickr.com/320/240/cat```
+
 ```-O "/home/vierifath/modul1no3/pdkt_kusuma_$i``` = Mengganti nama file dengan ```pdkt_kusuma_$i```
+
 ```-a "/home/vierifath/modul1no3/wget.log"``` = Menyimpan log messages
 
 
@@ -184,8 +191,5 @@ kedalam folder /kenangan dan kalian bisa mendownload gambar baru lagi.
 *Penjelasan =
 Dengan membuat crontab dengan format diatur jamnya yaitu jam 6.05 hingga 23 dengan interval 8 jam. Kemudian didalam soal diperintahkan untuk melakukannya setiap hari kecuali hari sabtu, maka diaturlah 1-5,7 sehingga ketika hari sabtu crontab tidak berjalan.
 
-
-
-
-Nama : Vieri Fath Ayuba (05111840000153)
+[c] Maaf mas 
 
