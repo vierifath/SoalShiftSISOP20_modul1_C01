@@ -1,3 +1,12 @@
+KELOMPOK        : C1
+ANGGOTA         :
+Vieri Fath Ayuba
+05111840000153
+
+
+
+
+
 # SoalShiftSISOP20_modul1_C01
 
 Jawaban Soal Shift Modul 1
@@ -19,6 +28,19 @@ END {for(jawaban in i)
         print jawaban" "i[jawaban]}
 ' Sample-Superstore.tsv | sort -nr | tail -1
 ```
+*Penjelasan
+```-F '        '```     = Memberi tahu separator nya adalah tab
+
+```{ i[$13]+=$21}```    = Mengambil isi pada kolom ke 13 yaitu region, kemudian setiap region akan dihitung profitnya
+``` END {for(jawaban in i) ```
+
+```print jawaban" "i[jawaban]}``` = Outputnya berupa region yang memiliki profit paling sedikit
+
+```Sample-Superstore.tsv``` = Nama file yang menjadi input
+
+``` sort -nr ```        = Mengurutkan dari terbesar hingga terkecil
+
+``` tail -1  ```        = Mengambil nilai dari yang terkecil sebanyak 1
 
 
 b. Tampilkan 2 negara bagian (state) yang memiliki keuntungan (profit) paling
@@ -36,6 +58,23 @@ END {for(jawaban in i)
 ' Sample-Superstore.tsv | sort -nr | tail -2
 ```
 
+```-F '        '```     = Memberi tahu separator nya adalah tab
+
+```if ($13 == "Central"```    = Mengambil isi pada kolom ke 13  berdasatkan region "Central"
+
+```{ i[$11]+=$21}```    = Mengambil isi pada kolom ke 13 yaitu region, kemudian setiap region akan dihitung profitnya
+
+``` END {for(jawaban in i) ```
+
+```print jawaban" "i[jawaban]}``` = Outputnya berupa state yang memiliki profit paling sedikit berdasarkan region "Central"
+
+```Sample-Superstore.tsv``` = Nama file yang menjadi input
+
+``` sort -nr ```        = Mengurutkan dari terbesar hingga terkecil
+
+``` tail -1  ```        = Mengambil nilai dari yang terkecil sebanyak 2
+
+
 
 c. Tampilkan 10 produk (product name) yang memiliki keuntungan (profit) paling
 sedikit berdasarkan 2 negara bagian (state) hasil poin b
@@ -46,13 +85,28 @@ sedikit berdasarkan 2 negara bagian (state) hasil poin b
 echo "SOAL 1C"
 echo " "
 echo "10 Produk yang memiliki keuntungan paling sedikit berdasarkan 2 state  :"
-awk -F '        ' '{{ if($13 == "Central" && $11 == "Texas" || $11 == "Illinoi$
+awk -F '        ' '{{ if($13 == "Central" && $11 == "Texas" || $11 == "Illinois") i[$17]+=$21}}
 END {for(jawaban in i) 
         print i[jawaban]" "jawaban} 
 ' Sample-Superstore.tsv | sort -nr | tail -10
 
 ```
 
+```-F '        '```     = Memberi tahu separator nya adalah tab
+
+```if ($13 == "Central"```    = Mengambil isi pada kolom ke 13  berdasatkan region "Centra"
+
+```{ i[$11]+=$21}```    = Mengambil isi pada kolom ke 17 yaitu produk, kemudian setiap region akan dihitung profitnya
+
+``` END {for(jawaban in i) ```
+
+```print jawaban" "i[jawaban]}``` = Outputnya berupa 10 produk yang memiliki profit paling sedikit berdasarkan region "Central" dan 2 state "Texas" dan "Illinois"
+
+```Sample-Superstore.tsv``` = Nama file yang menjadi input
+
+``` sort -nr ```        = Mengurutkan dari terbesar hingga terkecil
+
+``` tail -10  ```        = Mengambil nilai dari yang terkecil sebanyak 10
 JAWABAN : 
 
 Jawaban Soal Shift Modul 2
@@ -99,14 +153,20 @@ pdkt_kusuma_3) serta jangan lupa untuk menyimpan log messages wget kedalam
 sebuah file "wget.log". Karena kalian gak suka ribet, kalian membuat penjadwalan untuk menjalankan script download gambar tersebut. Namun, script download tersebut hanya
 berjalan
 ```
-
 for ((i=1 ; $i<=28 ; i++))
 do
 
-wget "https://loremflickr.com/320/240/cat" -a "/home/vierifath/modul1no3/wget.$
+wget "https://loremflickr.com/320/240/cat" -a "/home/vierifath/modul1no3/wget.log" -O "/home/vierifath/modul1no3/pdkt_kusuma_$i"
 
 done
 ```
+*Penjelasan =
+Membuay perulangan dari 1 hingga 28 sehingga kita dapa mendownload sebanyak 28 gambar
+```wget "https://loremflickr.com/320/240/cat``` = Download foto dari ```URL https://loremflickr.com/320/240/cat```
+```-O "/home/vierifath/modul1no3/pdkt_kusuma_$i``` = Mengganti nama file dengan ```pdkt_kusuma_$i```
+```-a "/home/vierifath/modul1no3/wget.log"``` = Menyimpan log messages
+
+
 
 [b] setiap 8 jam dimulai dari jam 6.05 setiap hari kecuali hari Sabtu Karena
 gambar yang didownload dari link tersebut bersifat random, maka ada kemungkinan
@@ -119,9 +179,10 @@ selalu menghibur Kusuma, jadi gambar yang telah terkirim tadi akan kalian simpan
 kedalam folder /kenangan dan kalian bisa mendownload gambar baru lagi.
 
 ```
-5 6-23/8 * * 0-5 /home/vierifath/modul1no3/soal3Ashift.sh
+5 6-23/8 * * 1-5,7 /home/vierifath/modul1no3/soal3Ashift.sh
 ```
-
+*Penjelasan =
+Dengan membuat crontab dengan format diatur jamnya yaitu jam 6.05 hingga 23 dengan interval 8 jam. Kemudian didalam soal diperintahkan untuk melakukannya setiap hari kecuali hari sabtu, maka diaturlah 1-5,7 sehingga ketika hari sabtu crontab tidak berjalan.
 
 
 
