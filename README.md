@@ -20,10 +20,13 @@ END {for(jawaban in i)
 ' Sample-Superstore.tsv | sort -nr | tail -1
 ```
 *Penjelasan
-```-F '        '``` = separator tab
-```{ i[$13]+=$21}``` = Ambil pada kolom ke 13, kemudian setiap region akan dihitung profitnya
-``` sort -nr ``` = Mengurutkan dari terbesar hingga terkecil
-```
+```-F '        '```     = Memberi tahu separator nya adalah tab
+```{ i[$13]+=$21}```    = Mengambil isi pada kolom ke 13 yaitu region, kemudian setiap region akan dihitung profitnya
+``` END {for(jawaban in i) ```
+```print jawaban" "i[jawaban]}``` = Outputnya berupa region yang memiliki profit paling sedikit
+```Sample-Superstore.tsv``` = Nama file yang menjadi input
+``` sort -nr ```        = Mengurutkan dari terbesar hingga terkecil
+``` tail -1  ```        = Mengambil nilai dari yang terkecil sebanyak 1
 
 
 b. Tampilkan 2 negara bagian (state) yang memiliki keuntungan (profit) paling
@@ -40,6 +43,15 @@ END {for(jawaban in i)
         print i[jawaban]" "jawaban} 
 ' Sample-Superstore.tsv | sort -nr | tail -2
 ```
+
+```-F '        '```     = Memberi tahu separator nya adalah tab
+```if ($13 == "Central"```    = Mengambil isi pada kolom ke 13  berdasatkan region "Centra"
+```{ i[$11]+=$21}```    = Mengambil isi pada kolom ke 13 yaitu region, kemudian setiap region akan dihitung profitnya
+``` END {for(jawaban in i) ```
+```print jawaban" "i[jawaban]}``` = Outputnya berupa state yang memiliki profit paling sedikit berdasarkan region "Central"
+```Sample-Superstore.tsv``` = Nama file yang menjadi input
+``` sort -nr ```        = Mengurutkan dari terbesar hingga terkecil
+``` tail -1  ```        = Mengambil nilai dari yang terkecil sebanyak 2
 
 
 c. Tampilkan 10 produk (product name) yang memiliki keuntungan (profit) paling
@@ -58,6 +70,14 @@ END {for(jawaban in i)
 
 ```
 
+```-F '        '```     = Memberi tahu separator nya adalah tab
+```if ($13 == "Central"```    = Mengambil isi pada kolom ke 13  berdasatkan region "Centra"
+```{ i[$11]+=$21}```    = Mengambil isi pada kolom ke 13 yaitu region, kemudian setiap region akan dihitung profitnya
+``` END {for(jawaban in i) ```
+```print jawaban" "i[jawaban]}``` = Outputnya berupa 10 produk yang memiliki profit paling sedikit berdasarkan region "Central" dan 2 state "Texas" dan "Illinois"
+```Sample-Superstore.tsv``` = Nama file yang menjadi input
+``` sort -nr ```        = Mengurutkan dari terbesar hingga terkecil
+``` tail -1  ```        = Mengambil nilai dari yang terkecil sebanyak 10
 JAWABAN : 
 
 Jawaban Soal Shift Modul 2
