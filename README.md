@@ -73,9 +73,9 @@ END {for(jawaban in i)
 
 ```Sample-Superstore.tsv``` = Nama file yang menjadi input
 
-``` sort -nr ```        = Mengurutkan dari terbesar hingga terkecil
+``` sort -g ```        = Mengurutkan dari terkecil hingga terbesar
 
-``` tail -1  ```        = Mengambil nilai dari yang terkecil sebanyak 2
+``` head -1  ```        = Mengambil nilai dari yang terkecil sebanyak 2
 
 
 
@@ -107,9 +107,9 @@ END {for(jawaban in i)
 
 ```Sample-Superstore.tsv``` = Nama file yang menjadi input
 
-``` sort -nr ```        = Mengurutkan dari terbesar hingga terkecil
+``` sort -g ```        = Mengurutkan dari terkecil hingga terbesar
 
-``` tail -10  ```        = Mengambil nilai dari yang terkecil sebanyak 10
+``` head -10  ```        = Mengambil nilai dari yang terkecil sebanyak 10
 JAWABAN : 
 
 Jawaban Soal Shift Modul 2
