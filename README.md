@@ -171,7 +171,9 @@ fi
 ```else```
 ```echo "Nama File Hanya boleh Alphabet"``` = jika tidak memenuhi syarat, akan muncul text : " Nama file hanya boleh alphabet"
 
+![2](https://user-images.githubusercontent.com/61290164/75608469-3d1ca000-5b32-11ea-966b-2ed5a08fe97e.PNG)
 
+![Capture](https://user-images.githubusercontent.com/61290164/75608470-3ee66380-5b32-11ea-8bb0-13f5fd65ee33.PNG)
 
 (c) Kemudian supaya file .txt tersebut tidak mudah diketahui maka nama filenya akan di
 enkripsi dengan menggunakan konversi huruf (string manipulation) yang disesuaikan
@@ -220,6 +222,7 @@ melakukan shift pada karakter menggunakan tr sesuai jam yang tersimpan
 ```mv $string.txt $encript.txt```
 mengganti nama dengan nama file yang baru 
 
+![fix1](https://user-images.githubusercontent.com/61290164/75608471-3f7efa00-5b32-11ea-855c-199710796332.PNG)
 
 
 (d) jangan lupa untuk membuat dekripsinya supaya
@@ -246,6 +249,8 @@ mv $string.txt $decript.txt
 
 done
 ```
+
+![fix2](https://user-images.githubusercontent.com/61290164/75608473-40179080-5b32-11ea-9583-d90e358ce8e3.PNG)
 
 **Penjelasan = **
 
