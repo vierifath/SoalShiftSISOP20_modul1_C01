@@ -340,9 +340,11 @@ done
 for ((i=1; i<=28; i++)) do mv pdkt_kusuma_"$i".jpg ./kenangan/kenangan_"$i".jpg
 ```
 **Penjelasan    =**
-1) Mendapatkan location dari wget.log dan masukkan ke location.log grep location wget.log >> location.log
-2) Membuat directory duplicate untuk foto yang sama dan unruk foto yang tidak sama
-3)
+* Mendapatkan location dari wget.log dan masukkan ke location.log grep location wget.log >> location.log
+
+* Membuat directory duplicate untuk foto yang sama dan unruk foto yang tidak sama
+
+*
 ```
 for ((i=0; i<28; i++)) do
         for ((j=0; j<=i; j++))do
@@ -351,6 +353,6 @@ if [ $i == $j ] then
 continue
 ```
 Membandingkan foto identik atau tidak
-4)rename file ke ./kenangan/kenangan_"$i".jpg
+* rename file ke ./kenangan/kenangan_"$i".jpg
 
 
