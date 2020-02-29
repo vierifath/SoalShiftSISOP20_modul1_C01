@@ -158,9 +158,27 @@ password.txt dibuat pada jam 01.28 maka namanya berubah menjadi qbttxpse.txt
 dengan perintah ‘bash soal2_enkripsi.sh password.txt’. Karena p adalah huruf ke 16 dan
 file dibuat pada jam 1 maka 16+1=17 dan huruf ke 17 adalah q dan begitu pula
 seterusnya. Apabila melebihi z, akan kembali ke a, contoh: huruf w dengan jam 5.28,
-maka akan menjadi huruf b.) dan 
+maka akan menjadi huruf b
 
-Belum cara enkripsi dan dekripsi
+```
+#!/bin/bash
+
+for input in $@; do
+
+savehour=$(date -r $input +"%H")
+
+
+hurufkapital="ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+hurufkecil="abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+
+string="${input%.*}"
+
+encript=$(echo $string | tr "${hurufkecil:0:26}${hurufkapital:0:26}" "${hurufkecil:${savehour}:26}${hurufkapital:${savehour}:26}")
+
+mv $string.txt $encript.txt
+
+done
+```
 
 (d) jangan lupa untuk membuat dekripsinya supaya
 nama file bisa kembali.
