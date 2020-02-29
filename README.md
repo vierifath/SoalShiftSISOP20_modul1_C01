@@ -127,10 +127,23 @@ besar, huruf kecil, dan angka.
 ```
 #! /bin/bash
 pass1=$1 
-password=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c28 | head -n 1)
+i=1
+while [ $i -eq 1 ];do
+password=$(head /dev/urandom | tr -dc a-zA-Z0-9 | head -c 28 | head -n 1)
+if [[ $password =~ [A-Z] ]]; then
+if [[ $password =~ [0-9] ]]; then
+if [[ $password =~ [a-z] ]]; then
+i=0
+fi
+fi
+fi
+done
 
-
-echo $password > "$pass1".txt
+if [[ $1 =~ ^[A-Za-z]+$ ]]; then
+echo  $password > /home/vierifath/modul1no2/"$pass1".txt
+else
+echo "Nama File Hanya boleh Alphabet"
+fi
 ```
 PENJELASAN      =
 ```password=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c28 | head -n 1)``` = Membuat baris password sepanjang 28 digit secara acak. Kemudian file password di move ke "$pass1.txt"
