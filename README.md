@@ -45,6 +45,7 @@ END {for(jawaban in i)
 
 ``` tail -1  ```        = Mengambil nilai dari yang terkecil sebanyak 1
 
+![no1](https://user-images.githubusercontent.com/61290164/75608438-05155d00-5b32-11ea-8b1f-ac0105635d13.PNG)
 
 b. Tampilkan 2 negara bagian (state) yang memiliki keuntungan (profit) paling
 sedikit berdasarkan hasil poin a
@@ -76,6 +77,8 @@ END {for(jawaban in i)
 ``` sort -g ```        = Mengurutkan dari terkecil hingga terbesar
 
 ``` head -2  ```        = Mengambil nilai dari yang terkecil sebanyak 2
+
+![Capture](https://user-images.githubusercontent.com/61290164/75608442-06df2080-5b32-11ea-971d-3fe0d199a2f3.PNG)
 
 
 
@@ -111,6 +114,7 @@ END {for(jawaban in i)
 
 ``` head -10  ```        = Mengambil nilai dari yang terkecil sebanyak 10
 
+![3](https://user-images.githubusercontent.com/61290164/75608441-06468a00-5b32-11ea-88aa-a7c56a87d8d1.PNG)
 
 **Jawaban Soal Shift Modul 2**
 
