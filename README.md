@@ -353,6 +353,6 @@ if [ $i == $j ] then
 continue
 ```
 Membandingkan foto identik atau tidak
-* rename file ke ./kenangan/kenangan_"$i".jpg
+* mv file ke ./kenangan/kenangan_"$i".jpg
 
 
