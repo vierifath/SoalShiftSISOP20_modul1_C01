@@ -113,6 +113,8 @@ END {for(jawaban in i)
 
 
 **Jawaban Soal Shift Modul 2**
+
+
 2) Pada suatu siang, laptop Randolf dan Afairuzr dibajak oleh seseorang dan kehilangan
 data-data penting. Untuk mencegah kejadian yang sama terulang kembali mereka
 meminta bantuan kepada Whits karena dia adalah seorang yang punya banyak ide.
@@ -166,6 +168,8 @@ Belum bisa cara enkripsi dan dekkripsi
 
 
 **Jawaban Soal Shift Modul 3**
+
+
 [a] Maka dari
 itu, kalian mencoba membuat script untuk mendownload 28 gambar dari
 "https://loremflickr.com/320/240/cat" menggunakan command wget dan menyimpan file
