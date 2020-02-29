@@ -318,5 +318,38 @@ kedalam folder /kenangan dan kalian bisa mendownload gambar baru lagi.
 **Penjelasan =**
 Dengan membuat crontab dengan format diatur jamnya yaitu jam 6.05 hingga 23 dengan interval 8 jam. Kemudian didalam soal diperintahkan untuk melakukannya setiap hari kecuali hari sabtu, maka diaturlah 1-5,7 sehingga ketika hari sabtu crontab tidak berjalan.
 
-[c] Maaf mas belum mengerti
+[c] Membuat sebuah script untuk mengidentifikasi gambar yang identik dari keseluruhan gambar yang terdownload tadi. Bila terindikasi sebagai gambar yang identik, maka sisakan 1 gambar dan pindahkan sisa file identik tersebut ke dalam folder ./duplicate dengan format filename "duplicate_nomor" (contoh : duplicate_200, duplicate_201). Setelah itu lakukan pemindahan semua gambar yang tersisa kedalam folder ./kenangan dengan format filename "kenangan_nomor" (contoh: kenangan_252, kenangan_253). Setelah tidak ada gambar di ​current directory​, maka lakukan backup seluruh log menjadi ekstensi ".log.bak"
+
+```
+#!/bin/bash
+grep "location" wget.log > location.log
+save arr < location.log
+for ((i=0; i<28; i++)) do
+        for ((j=0; j<=i; j++))do
+
+if [ $i == $j ] then
+continue
+
+
+
+elif [ "${arr[$i]}" == "${arr[$j]}" ] then mv pdkt_kusuma_"$(($i+1))".jpg ./duplicate/duplicate_"$i".jpg
+fi
+done
+done
+
+for ((i=1; i<=28; i++)) do mv pdkt_kusuma_"$i".jpg ./kenangan/kenangan_"$i".jpg
+```
+**Penjelasan    =**
+1) Mendapatkan location dari wget.log dan masukkan ke location.log grep location wget.log >> location.log
+2) Membuat directory duplicate untuk foto yang sama dan unruk foto yang tidak sama
+3)
+```
+for ((i=0; i<28; i++)) do
+        for ((j=0; j<=i; j++))do
+
+if [ $i == $j ] then
+continue
+```
+Membandingkan foto identik atau tidak
+
 
