@@ -147,8 +147,26 @@ else
 echo "Nama File Hanya boleh Alphabet"
 fi
 ```
-PENJELASAN      =
-```password=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c28 | head -n 1)``` = Membuat baris password sepanjang 28 digit secara acak. Kemudian file password di move ke "$pass1.txt"
+**PENJELASAN      =***
+```i=1``` = menginisialisasi perulangan 
+
+```while [ $i -eq 1 ]; do``` = melakukan perulangan
+
+```password=$(head /dev/urandom | tr -dc a-zA-Z0-9 | head -c 28 | head -n 1)``` = membuat password secara acak (alfanumeric) sebanyak 28 karakter
+
+```if [[ $password =~ [A-Z] ]];``` = kondisi untuk mengecek huruf kapital (A-Z) telah muncul
+
+```if [[ $password =~ [0-9] ]];``` = kondisi untuk mengecek angka (0-9) telah muncul
+
+```if [[ $password =~ [a-z] ]];``` = kondisi untuk mengecek huruf kecil (a-z) telah muncul
+
+
+```if [[ $1 =~ ^[A-Za-z]+$ ]]; then``` = kondisi dimana nama file hanya berupa alfabet sesuai dengan perintah soal
+```echo  $password > /home/vierifath/modul1no2/"$pass1".txt``` = menyimpan dalam .txt yang telah dibuat
+
+```else```
+```echo "Nama File Hanya boleh Alphabet"``` = jika tidak memenuhi syarat, akan muncul text : " Nama file hanya boleh alphabet"
+
 
 
 (c) Kemudian supaya file .txt tersebut tidak mudah diketahui maka nama filenya akan di
@@ -182,7 +200,30 @@ done
 
 (d) jangan lupa untuk membuat dekripsinya supaya
 nama file bisa kembali.
-Belum bisa cara enkripsi dan dekkripsi
+```
+#!/bin/bash
+
+for input in $@; do
+
+savehour=$(date -r $input +"%H")
+
+
+dcrpt=$(($savehour*(-1)+26))
+
+hurufkapital=ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
+hurufkecil=abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+
+
+string="${input%.*}"
+
+decript=$(echo $string | tr "${hurufkecil:0:26}" "${hurufkecil:${dcrpt}:26}" | tr "${hurufkapital:0:26}" "${hurufkapital:${dcrpt}:26}") 
+
+mv $string.txt $decript.txt
+
+done
+```
+
+
 
 
 **Jawaban Soal Shift Modul 3**
