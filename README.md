@@ -1,3 +1,5 @@
+# SoalShiftSISOP20_modul1_C01
+
 ### KELOMPOK        : C1
 ANGGOTA         :
 
@@ -6,11 +8,6 @@ ANGGOTA         :
 * Himawan Wijaya
   05111640000133
 
-
-
-
-
-# SoalShiftSISOP20_modul1_C01
 
 ### Jawaban Soal Shift Modul 1
 1) Whits adalah seorang mahasiswa teknik informatika. Dia mendapatkan tugas praktikum
@@ -31,7 +28,7 @@ END {for(jawaban in i)
         print jawaban" "i[jawaban]}
 ' Sample-Superstore.tsv | sort -nr | tail -1
 ```
-*Penjelasan
+**Penjelasan =**
 ```-F '        '```     = Memberi tahu separator nya adalah tab
 
 ```{ i[$13]+=$21}```    = Mengambil isi pada kolom ke 13 yaitu region, kemudian setiap region akan dihitung profitnya
@@ -62,6 +59,7 @@ END {for(jawaban in i)
 ' Sample-Superstore.tsv | sort -g | head -2
 ```
 
+**Penjelasan =**
 ```-F '        '```     = Memberi tahu separator nya adalah tab
 
 ```if ($13 == "Central"```    = Mengambil isi pada kolom ke 13  berdasatkan region "Central"
@@ -97,6 +95,8 @@ END {for(jawaban in i)
 ' Sample-Superstore.tsv | sort -g | head -10
 
 ```
+
+**Penjelasan =**
 
 ```-F '        '```     = Memberi tahu separator nya adalah tab
 
@@ -151,7 +151,7 @@ else
 echo "Nama File Hanya boleh Alphabet"
 fi
 ```
-**PENJELASAN      =***
+**Penjelasan      =***
 ```i=1``` = menginisialisasi perulangan 
 
 ```while [ $i -eq 1 ]; do``` = melakukan perulangan
@@ -204,7 +204,7 @@ mv $string.txt $encript.txt
 done
 ```
 
-**Penjelasan**
+**Penjelasan  =**
 
 ```savehour=$(date -r $input +"%H")``` = menyimpan data jam file pada variabel savehour
 
@@ -293,7 +293,7 @@ wget "https://loremflickr.com/320/240/cat" -a "/home/vierifath/modul1no3/wget.lo
 
 done
 ```
-*Penjelasan =
+**Penjelasan =**
 Membuay perulangan dari 1 hingga 28 sehingga kita dapa mendownload sebanyak 28 gambar
 ```wget "https://loremflickr.com/320/240/cat``` = Download foto dari ```URL https://loremflickr.com/320/240/cat```
 
@@ -317,7 +317,7 @@ kedalam folder /kenangan dan kalian bisa mendownload gambar baru lagi.
 ```
 5 6-23/8 * * 1-5,7 /home/vierifath/modul1no3/soal3Ashift.sh
 ```
-*Penjelasan =
+**Penjelasan =**
 Dengan membuat crontab dengan format diatur jamnya yaitu jam 6.05 hingga 23 dengan interval 8 jam. Kemudian didalam soal diperintahkan untuk melakukannya setiap hari kecuali hari sabtu, maka diaturlah 1-5,7 sehingga ketika hari sabtu crontab tidak berjalan.
 
 [c] Maaf mas belum mengerti
