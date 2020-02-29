@@ -1,6 +1,7 @@
 ### KELOMPOK        : C1
 ANGGOTA         :
-*Vieri Fath Ayuba
+
+* Vieri Fath Ayuba
  05111840000153
 * Himawan Wijaya
   05111640000133
