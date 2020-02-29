@@ -301,6 +301,7 @@ Membuay perulangan dari 1 hingga 28 sehingga kita dapa mendownload sebanyak 28 g
 
 ```-a "/home/vierifath/modul1no3/wget.log"``` = Menyimpan log messages
 
+![Capture](https://user-images.githubusercontent.com/61290164/75608736-ed8ba380-5b34-11ea-821e-2b7f4a668bfb.PNG)
 
 
 [b] setiap 8 jam dimulai dari jam 6.05 setiap hari kecuali hari Sabtu Karena
