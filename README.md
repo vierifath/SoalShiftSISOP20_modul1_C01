@@ -58,7 +58,7 @@ echo " 2 State  yang  memiliki profit paling sedikit  :"
 awk -F '        ' '{if ($13 == "Central") i[$11]+=$21}
 END {for(jawaban in i) 
         print i[jawaban]" "jawaban} 
-' Sample-Superstore.tsv | sort -nr | tail -2
+' Sample-Superstore.tsv | sort -g | head -2
 ```
 
 ```-F '        '```     = Memberi tahu separator nya adalah tab
@@ -75,7 +75,7 @@ END {for(jawaban in i)
 
 ``` sort -g ```        = Mengurutkan dari terkecil hingga terbesar
 
-``` head -1  ```        = Mengambil nilai dari yang terkecil sebanyak 2
+``` head -2  ```        = Mengambil nilai dari yang terkecil sebanyak 2
 
 
 
@@ -91,7 +91,7 @@ echo "10 Produk yang memiliki keuntungan paling sedikit berdasarkan 2 state  :"
 awk -F '        ' '{{ if($13 == "Central" && $11 == "Texas" || $11 == "Illinois") i[$17]+=$21}}
 END {for(jawaban in i) 
         print i[jawaban]" "jawaban} 
-' Sample-Superstore.tsv | sort -nr | tail -10
+' Sample-Superstore.tsv | sort -g | head -10
 
 ```
 
@@ -110,9 +110,9 @@ END {for(jawaban in i)
 ``` sort -g ```        = Mengurutkan dari terkecil hingga terbesar
 
 ``` head -10  ```        = Mengambil nilai dari yang terkecil sebanyak 10
-JAWABAN : 
 
-Jawaban Soal Shift Modul 2
+
+**Jawaban Soal Shift Modul 2**
 2) Pada suatu siang, laptop Randolf dan Afairuzr dibajak oleh seseorang dan kehilangan
 data-data penting. Untuk mencegah kejadian yang sama terulang kembali mereka
 meminta bantuan kepada Whits karena dia adalah seorang yang punya banyak ide.
@@ -152,7 +152,7 @@ nama file bisa kembali.
 Belum bisa cara enkripsi dan dekkripsi
 
 
-Jawaban Soal Shift Modul 3
+**Jawaban Soal Shift Modul 3**
 [a] Maka dari
 itu, kalian mencoba membuat script untuk mendownload 28 gambar dari
 "https://loremflickr.com/320/240/cat" menggunakan command wget dan menyimpan file
