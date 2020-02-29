@@ -191,12 +191,32 @@ hurufkecil="abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
 
 string="${input%.*}"
 
-encript=$(echo $string | tr "${hurufkecil:0:26}${hurufkapital:0:26}" "${hurufkecil:${savehour}:26}${hurufkapital:${savehour}:26}")
+encript=$(echo $string | tr "${hurufkecil:0:26}${hurufkapital:0:26}""${hurufkecil:${savehour}:26}${hurufkapital:${savehour}:26}")
 
 mv $string.txt $encript.txt
 
 done
 ```
+
+**Penjelasan**
+
+```savehour=$(date -r $input +"%H")``` = menyimpan data jam file pada variabel savehour
+
+```
+hurufkapital="ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+hurufkecil="abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+```
+mendeklarasi variabel huruf kapital dan huruf kecil
+
+```string="${input%.*}"``` = mengambil character tanpa titik (.)
+
+```encript=$(echo $string | tr "${hurufkecil:0:26}${hurufkapital:0:26}"${hurufkecil:${savehour}:26}${hurufkapital:${savehour}:26}")```
+melakukan shift pada karakter menggunakan tr sesuai jam yang tersimpan
+
+```mv $string.txt $encript.txt```
+mengganti nama dengan nama file yang baru 
+
+
 
 (d) jangan lupa untuk membuat dekripsinya supaya
 nama file bisa kembali.
@@ -223,6 +243,26 @@ mv $string.txt $decript.txt
 done
 ```
 
+**Penjelasan = **
+
+```savehour=$(date -r $input +"%H")``` = menyimpan data jam file pada variabel savehour
+
+
+```dcrpt=$(($savehour*(-1)+26))``` = melakukan shift sebanyak alphabet (26) dikurangi banyaknya shift sebelumnya
+
+```
+hurufkapital="ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+hurufkecil="abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+```
+= mendeklarasi variabel huruf kapital dan huruf kecil
+
+```string="${input%.*}"``` = mengambil character tanpa titik (.)
+
+```decript=$(echo $string | tr "${hurufkecil:0:26}" "${hurufkecil:${dcrpt}:26}" | tr "${hurufkapital:0:26}" "${hurufkapital:${dcrpt}:26}") ``` 
+= melakukan shift pada karakter menggunakan tr sesuai jam yang tersimpan
+
+```mv $string.txt $decript.txt```
+mengganti nama dengan nama file yang baru (decript.txt)
 
 
 
