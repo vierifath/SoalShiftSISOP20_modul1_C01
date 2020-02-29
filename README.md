@@ -10,7 +10,7 @@ Himawan Wijaya
 
 
 
-###**SoalShiftSISOP20_modul1_C01**
+#SoalShiftSISOP20_modul1_C01
 
 **Jawaban Soal Shift Modul 1**
 1) Whits adalah seorang mahasiswa teknik informatika. Dia mendapatkan tugas praktikum
