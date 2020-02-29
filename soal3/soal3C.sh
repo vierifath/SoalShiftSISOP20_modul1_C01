@@ -14,4 +14,4 @@ fi
 done
 done
 
-for ((i=1; i<=2; i++)) do mv pdkt_kusuma_"$i".jpg ./kenangan/kenangan_"$i".jpg
+for ((i=1; i<=28; i++)) do mv pdkt_kusuma_"$i".jpg ./kenangan/kenangan_"$i".jpg
