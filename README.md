@@ -1,18 +1,17 @@
-```
-KELOMPOK        : C1
+###KELOMPOK        : C1
 ANGGOTA         :
 Vieri Fath Ayuba
-05111840000153
+*05111840000153
 Himawan Wijaya
-05111640000133
-```
+*05111640000133
+
 
 
 
 
 # SoalShiftSISOP20_modul1_C01
 
-**Jawaban Soal Shift Modul 1**
+### Jawaban Soal Shift Modul 1
 1) Whits adalah seorang mahasiswa teknik informatika. Dia mendapatkan tugas praktikum
 untuk membuat laporan berdasarkan data yang ada pada file “ Sample-Superstore.tsv” .
 Namun dia tidak dapat menyelesaikan tugas tersebut. Laporan yang diminta berupa :
